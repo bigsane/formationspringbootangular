@@ -11,6 +11,8 @@ import { ParkingService } from '../parking.service';
 export class ParkingDetailComponent implements OnInit {
 
   parking: ParkingInfo;
+  isLoaded: boolean = false;
+
   constructor(private route: ActivatedRoute, private parkingService: ParkingService) { }
 
   ngOnInit(): void {
@@ -18,8 +20,9 @@ export class ParkingDetailComponent implements OnInit {
     this.parkingService.getParking(parkingId).subscribe(
       reponse => {
         this.parking = reponse;
+        this.isLoaded = true;
       }
-    )
+    );
   }
 
 }
