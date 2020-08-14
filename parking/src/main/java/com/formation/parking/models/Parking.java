@@ -5,7 +5,7 @@ public class Parking {
 	private String nom;
 	private int nbPlacesDispo;
 	private int nbPlacesTotal;
-	private String status;
+	private String statut;
 	private String heureMaj;
 
 	public String getNom() {
@@ -26,11 +26,11 @@ public class Parking {
 	public void setNbPlacesTotal(int nbPlacesTotal) {
 		this.nbPlacesTotal = nbPlacesTotal;
 	}
-	public String getStatus() {
-		return status;
+	public String getStatut() {
+		return statut;
 	}
-	public void setStatus(String status) {
-		this.status = status;
+	public void setStatut(String statut) {
+		this.statut = statut;
 	}
 	public String getHeureMaj() {
 		return heureMaj;
