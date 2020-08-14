@@ -9,11 +9,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AppRoutingModule } from './app-routing.module';
+import { ParkingDetailComponent } from './parking-detail/parking-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParkingsComponent
+    ParkingsComponent,
+    ParkingDetailComponent
   ],
   imports: [
     BrowserModule,
