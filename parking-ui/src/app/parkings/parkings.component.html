@@ -1,9 +1,6 @@
-<p>parkings works! test</p>
+<mat-spinner style="margin: 0 auto;" color="accent" diameter="30" *ngIf="!isLoaded"></mat-spinner>
 
-<div *ngFor="let parking of parkings">
-    <div> Nom : {{parking.nom}} </div>
-    <div> Nombre de places disponibles : {{parking.nbPlacesDispo}} </div>
-    <div> Nombre de places totales : {{parking.nbPlacesTotal}} </div>
-    <div> Statut : {{parking.statut}} </div>
-    <div> Heure de mise à jour : {{parking.heureMaj}} </div>
-</div>
+<mat-card *ngFor="let parking of parkings" class="parking-card">
+    <span style="font-weight: bold;"> Parking {{parking.nom}} </span> <span style="float: right;" [ngStyle]="calculStyleStatut(parking)">{{parking.statut}}</span><br>
+    <span *ngIf="parking.statut !== 'Données non disponibles'"> Places disponibles : {{parking.nbPlacesDispo}} </span>
+</mat-card>
