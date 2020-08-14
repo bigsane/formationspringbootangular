@@ -18,7 +18,7 @@ public class ParkingController {
 		parkingTest.setNom("Parking de test");
 		parkingTest.setNbPlacesTotal(300);
 		parkingTest.setNbPlacesDispo(125);
-		parkingTest.setStatus("OUVERT");
+		parkingTest.setStatus("FERME");
 		parkingTest.setHeureMaj("20h15");
 		
 		ArrayList<Parking> liste = new ArrayList<Parking>();
