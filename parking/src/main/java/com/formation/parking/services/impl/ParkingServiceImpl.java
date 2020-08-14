@@ -30,6 +30,7 @@ public class ParkingServiceImpl implements ParkingService {
 		List<Parking> resultat = new ArrayList<Parking>();
 		for (RecordEntity record : reponse.getRecords()) {
 			Parking parking = new Parking();
+			parking.setIdentifiant(Integer.parseInt(record.getFields().getIdObj()));
 			parking.setNom(record.getFields().getGrpNom());
 			parking.setStatut(getLibelleStatut(record));
 			parking.setNbPlacesDispo(record.getFields().getGrpDisponible());
